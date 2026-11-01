@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confraternização IBCP 2026 | Inscrições</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        church: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            500: '#c27d66',
+                            600: '#ab614a',
+                            700: '#8c4b37',
+                            800: '#733f30',
+                            900: '#4a251b',
+                        },
+                        amberGold: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .carousel-item {
+            transition: opacity 0.7s ease-in-out;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header / Navbar Topo -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-church-600 flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-church text-lg"></i>
+                </div>
+                <div>
+                    <span class="block text-xs font-semibold tracking-wider text-church-600 uppercase">Igreja Batista</span>
+                    <span class="text-lg font-bold font-serif text-slate-900 leading-tight">IBCP 2026</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#info" class="hover:text-church-600 transition">Informações</a>
+                <a href="#programacao" class="hover:text-church-600 transition">Programação</a>
+                <a href="#inscricao" class="hover:text-church-600 transition">Inscrição</a>
+                <a href="#galeria" class="hover:text-church-600 transition">Chácara Monarca</a>
+            </nav>
+
+            <div>
+                <a href="#inscricao" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-church-600 hover:bg-church-700 text-white font-semibold text-sm shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-pen-to-square mr-2"></i> Confirmar Presença
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION com Carrossel de Fotos da Chácara -->
+    <section class="relative pt-20 min-h-screen flex items-center bg-slate-900 text-white overflow-hidden">
+        <!-- Background Carrossel -->
+        <div id="hero-carousel" class="absolute inset-0 z-0">
+            <!-- Slide 1 -->
+            <div class="carousel-item absolute inset-0 opacity-100">
+                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80" alt="Chácara Monarca" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item absolute inset-0 opacity-0">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80" alt="Piscina e Lazer" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item absolute inset-0 opacity-0">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80" alt="Área Verde e Recreação" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- Conteúdo do Hero -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-9 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-church-500/30 border border-church-400/40 text-church-100 text-sm font-medium backdrop-blur-md">
+                    <i class="fa-regular fa-calendar-check text-amber-300"></i>
+                    <span>Sábado, 13 de Dezembro de 2026 • 08h às 17h</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-serif font-bold tracking-tight text-white leading-tight">
+                    Confraternização <span class="text-amber-300 italic">IBCP 2026</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                    Um dia especial de comunhão, batismo nas águas e lazer com toda a família.
+                </p>
+
+                <div class="pt-4 flex flex-wrap gap-4 items-center">
+                    <a href="#inscricao" class="px-8 py-4 rounded-xl bg-church-600 hover:bg-church-500 text-white font-bold text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 flex items-center gap-3">
+                        Garantir Vaga da Família
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#info" class="px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base backdrop-blur-md transition">
+                        Ver Local & Endereço
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões do Carrossel -->
+        <div class="absolute bottom-8 right-8 z-20 flex items-center space-x-3 bg-slate-900/60 p-2 rounded-2xl backdrop-blur-md border border-white/10">
+            <button id="prev-slide" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/30 text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="flex space-x-1.5 px-2">
+                <span class="slide-dot w-6 h-2.5 rounded-full bg-white transition-all"></span>
+                <span class="slide-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></span>
+                <span class="slide-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all"></span>
+            </div>
+            <button id="next-slide" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/30 text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- INFORMAÇÕES DO EVENTO -->
+    <section id="info" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-church-600 uppercase tracking-widest mb-2">Informações Importantes</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Detalhes da Confraternização</p>
+                <div class="w-16 h-1 bg-church-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Cards de Informações Rápidas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-church-100 text-church-600 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Café da Manhã</h3>
+                    <p class="text-slate-600 text-sm">Servido das 08:00 às 09:00<br>Boas-vindas à família</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Batismo nas Águas</h3>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Almoço</h3>
+                    <p class="text-slate-600 text-sm">Servido às 13:00<br>Comunhão e confraternização</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Localização</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Chácara Monarca<br>Tv. Marcos Favalli, 87<br>Vila Maria de Maggi, Suzano - SP</p>
+                </div>
+            </div>
+
+            <!-- Programação e Mapa/Endereço -->
+            <div id="programacao" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Cronograma -->
+                <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                    <h3 class="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-clock text-church-600"></i> Programação do Dia (13/12)
+                    </h3>
+                    
+                    <div class="space-y-6 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
+                        <div class="relative pl-10">
+                            <span class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-church-600 ring-4 ring-white"></span>
+                            <h4 class="font-bold text-slate-900">08:00 às 09:00 - Recepção & Café da Manhã</h4>
+                            <p class="text-sm text-slate-600">Recepção dos irmãos com café da manhã especial de comunhão.</p>
+                        </div>
+
+                        <div class="relative pl-10">
+                            <span class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></span>
+                            <h4 class="font-bold text-slate-900 text-amber-700">10:30 - Batismo nas Águas</h4>
+                            <p class="text-sm text-slate-600 font-medium">Batismo dos irmãos.</p>
+                        </div>
+                        
+                        <div class="relative pl-10">
+                            <span class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white"></span>
+                            <h4 class="font-bold text-slate-900 text-emerald-700">13:00 - Almoço</h4>
+                            <p class="text-sm text-slate-600">Almoço especial.</p>
+                        </div>
+
+                        <div class="relative pl-10">
+                            <span class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-sky-500 ring-4 ring-white"></span>
+                            <h4 class="font-bold text-slate-900">14:30 - Lazer & Recreação</h4>
+                            <p class="text-sm text-slate-600">Piscina, futebol e momento livre.</p>
+                        </div>
+
+                        <div class="relative pl-10">
+                            <span class="absolute left-2 top-1.5 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></span>
+                            <h4 class="font-bold text-slate-900">17:00 - Encerramento</h4>
+                            <p class="text-sm text-slate-600">Agradecimentos e retorno.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endereço e Local -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="bg-gradient-to-br from-church-700 to-church-900 text-white p-8 rounded-3xl shadow-xl">
+                        <span class="bg-amber-400 text-slate-950 font-bold text-xs uppercase px-3 py-1 rounded-full inline-block mb-4">Local do Evento</span>
+                        <h4 class="text-3xl font-bold font-serif mb-2">Chácara Monarca</h4>
+                        <p class="text-church-100 text-sm mb-4 leading-relaxed">
+                            <i class="fa-solid fa-location-dot text-amber-300 mr-2"></i>
+                            Tv. Marcos Favalli, 87 - Vila Maria de Maggi, Suzano - SP, 08680-150
+                        </p>
+                        <div class="pt-2">
+                            <a href="https://maps.google.com/?q=Tv.+Marcos+Favalli,+87+-+Vila+Maria+de+Maggi,+Suzano+-+SP,+08680-150" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-church-800 font-bold text-sm hover:bg-amber-50 transition">
+                                <i class="fa-solid fa-map-location-dot"></i> Abrir no Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 p-6 rounded-2xl text-amber-900">
+                        <h4 class="font-bold flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-circle-info text-amber-600"></i> O que levar?
+                        </h4>
+                        <ul class="text-xs space-y-2 list-disc list-inside text-amber-800">
+                            <li>Roupas de banho para uso da piscina (levar toalha).</li>
+                            <li>Protetor solar e repelente.</li>
+                            <li>Roupas extras para os candidatos ao batismo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE INSCRIÇÃO -->
+    <section id="inscricao" class="py-20 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200/80">
+                
+                <!-- Cabeçalho do Formulário -->
+                <div class="bg-church-700 px-8 py-8 text-white relative">
+                    <h2 class="text-3xl font-serif font-bold">Ficha de Inscrição - IBCP 2026</h2>
+                    <p class="text-church-100 text-sm mt-1">Informe seus dados e de todos os familiares e acompanhantes que estarão presentes.</p>
+                </div>
+
+                <form id="registration-form" class="p-8 space-y-8">
+                    
+                    <!-- Dados do Responsável -->
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3 mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-user text-church-600"></i> Dados do Responsável Principal
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label for="resp-nome" class="block text-sm font-semibold text-slate-700 mb-2">Nome Completo do Responsável *</label>
+                                <input type="text" id="resp-nome" required placeholder="Ex: João da Silva" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none transition text-slate-800 text-sm">
+                            </div>
+
+                            <div>
+                                <label for="resp-email" class="block text-sm font-semibold text-slate-700 mb-2">E-mail *</label>
+                                <input type="email" id="resp-email" required placeholder="seuemail@exemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none transition text-slate-800 text-sm">
+                            </div>
+
+                            <div>
+                                <label for="resp-telefone" class="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / Telefone *</label>
+                                <input type="tel" id="resp-telefone" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none transition text-slate-800 text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEÇÃO DINÂMICA DE MEMBROS DA FAMÍLIA -->
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-6">
+                            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-users text-church-600"></i> Membros da Família / Acompanhantes
+                            </h3>
+                            <span class="text-xs bg-church-50 text-church-700 px-3 py-1 rounded-full font-medium">Um nome por linha</span>
+                        </div>
+
+                        <p class="text-xs text-slate-500 mb-4">Adicione cada familiar que participará com você informando o nome e a idade.</p>
+
+                        <!-- Container de Linhas Dinâmicas -->
+                        <div id="family-members-container" class="space-y-4">
+                            <!-- Injetado dinamicamente via JS -->
+                        </div>
+
+                        <!-- Botão de Adicionar Membro -->
+                        <button type="button" id="btn-add-member" class="mt-4 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-church-700 font-semibold text-sm transition">
+                            <i class="fa-solid fa-plus-circle text-church-600"></i> Adicionar Outro Familiar
+                        </button>
+                    </div>
+
+		    <!-- Botão de Envio -->
+                    <div class="pt-4 border-t border-slate-200">
+                        <button type="submit" id="btn-confirm" class="w-full py-4 rounded-xl bg-church-600 hover:bg-church-700 text-white font-bold text-lg shadow-lg hover:shadow-xl transition transform active:scale-95 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-paper-plane"></i> Confirmar Inscrição IBCP 2026
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS DA CHÁCARA MONARCA -->
+    <section id="galeria" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-church-600 uppercase tracking-widest mb-2">Espaço do Evento</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Fotos da Chácara Monarca</p>
+                <p class="text-slate-600 mt-2 text-sm">Clique nas imagens para ampliar.</p>
+                <div class="w-16 h-1 bg-church-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Grid da Galeria -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Piscina da Chácara Monarca" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Piscina & Área de Lazer
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Área Verde e Gramado" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Campo e Gramado
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Salão de Festas e Almoço" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Salão Coberto / Almoço
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Espaço para Crianças" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Espaço de Recreação
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Natureza em Suzano" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Vista da Natureza
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Área para Culto e Batismo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Espaço de Comunhão
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER DA PÁGINA -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-full bg-church-600 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-church text-sm"></i>
+                </div>
+                <span class="text-white font-bold font-serif text-lg">IBCP 2026</span>
+            </div>
+
+            <p class="text-xs text-center md:text-right">
+                &copy; 2026 Confraternização IBCP - Chácara Monarca.<br>
+                Tv. Marcos Favalli, 87 - Vila Maria de Maggi, Suzano - SP
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL LIGHTBOX PARA A GALERIA -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-slate-950/90 hidden items-center justify-center p-4 backdrop-blur-md">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-400 transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] overflow-hidden rounded-2xl shadow-2xl relative">
+            <img id="lightbox-img" src="" alt="Ampliada" class="w-full h-full object-contain">
+        </div>
+    </div>
+
+    <!-- MODAL DE SUCESSO DO FORMULÁRIO -->
+    <div id="success-modal" class="fixed inset-0 z-50 bg-slate-950/70 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl space-y-4 border border-slate-100">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-slate-900">Inscrição Confirmada!</h3>
+            <p class="text-slate-600 text-sm">
+                Recebemos a inscrição da sua família com sucesso. Enviamos os detalhes e as orientações para o e-mail informado.
+            </p>
+            <div class="pt-4">
+                <button id="close-success" class="w-full py-3 bg-church-600 hover:bg-church-700 text-white font-bold rounded-xl transition">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.slide-dot');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('opacity-0');
+                        slide.classList.add('opacity-100');
+                    } else {
+                        slide.classList.remove('opacity-100');
+                        slide.classList.add('opacity-0');
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-white/40');
+                        dot.classList.add('bg-white', 'w-6');
+                    } else {
+                        dot.classList.remove('bg-white', 'w-6');
+                        dot.classList.add('bg-white/40', 'w-2.5');
+                    }
+                });
+
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function prevSlide() {
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+            }
+
+            function startAutoplay() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetAutoplay() {
+                clearInterval(slideInterval);
+                startAutoplay();
+            }
+
+            if(nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => { nextSlide(); resetAutoplay(); });
+                prevBtn.addEventListener('click', () => { prevSlide(); resetAutoplay(); });
+                startAutoplay();
+            }
+
+            const familyContainer = document.getElementById('family-members-container');
+            const btnAddMember = document.getElementById('btn-add-member');
+            let memberCount = 0;
+
+            // Função para criar uma nova linha de membro
+            function createMemberRow(defaultName = '', defaultAge = '') {
+                memberCount++;
+                const row = document.createElement('div');
+                row.className = 'family-row grid grid-cols-12 gap-3 items-center bg-slate-50 p-3 rounded-xl border border-slate-200';
+                row.id = `member-row-${memberCount}`;
+
+                row.innerHTML = `
+                    <div class="col-span-7 sm:col-span-8">
+                        <input type="text" name="member_name[]" value="${defaultName}" required placeholder="Nome do familiar" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-nome">
+                    </div>
+                    <div class="col-span-3 sm:col-span-3">
+                        <input type="number" name="member_age[]" value="${defaultAge}" required min="0" max="120" placeholder="Idade" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-idade">
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 text-right">
+                        <button type="button" class="btn-remove-member w-9 h-9 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center transition" title="Remover">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                `;
+
+                // Evento para remover
+                row.querySelector('.btn-remove-member').addEventListener('click', () => {
+                    const rows = familyContainer.querySelectorAll('.family-row');
+                    if (rows.length > 1) {
+                        row.remove();
+                    } else {
+                        // Se for a única linha, apenas limpa os valores
+                        row.querySelectorAll('input').forEach(input => input.value = '');
+                    }
+                });
+
+                return row;
+            }
+
+            // Adiciona a primeira linha por padrão
+            if(familyContainer) {
+                familyContainer.appendChild(createMemberRow());
+            }
+
+            // Evento no botão de adicionar
+            if(btnAddMember) {
+                btnAddMember.addEventListener('click', () => {
+                    familyContainer.appendChild(createMemberRow());
+                });
+            }
+
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightboxModal = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeLightbox = document.getElementById('close-lightbox');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    if(img && lightboxModal && lightboxImg) {
+                        lightboxImg.src = img.src;
+                        lightboxModal.classList.remove('hidden');
+                        lightboxModal.classList.add('flex');
+                        document.body.classList.add('modal-active');
+                    }
+                });
+            });
+
+            if(closeLightbox) {
+                closeLightbox.addEventListener('click', () => {
+                    lightboxModal.classList.add('hidden');
+                    lightboxModal.classList.remove('flex');
+                    document.body.classList.remove('modal-active');
+                });
+            }
+
+            // Fechar modal ao clicar fora
+            if(lightboxModal) {
+                lightboxModal.addEventListener('click', (e) => {
+                    if (e.target === lightboxModal) {
+                        lightboxModal.classList.add('hidden');
+                        lightboxModal.classList.remove('flex');
+                        document.body.classList.remove('modal-active');
+                    }
+                });
+            }
+
+            const registrationForm = document.getElementById('registration-form');
+            const successModal = document.getElementById('success-modal');
+            const closeSuccess = document.getElementById('close-success');
+
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbw94KpXOrrAsxMuIfHRZwB1-7S2uIgU-8wFoP7zaz6cIX9NdxIcuWB5hew1b7RckoLMtA/exec';
+
+                    // Coleta dados dos membros da família
+                    const membros = [];
+                    document.querySelectorAll('.family-row').forEach(item => {
+                        const nome = item.querySelector('.membro-nome').value;
+                        const idade = item.querySelector('.membro-idade').value;
+                        if(nome && idade) membros.push({ nome, idade });
+                    });
+
+                    const payload = {
+                        nome: document.getElementById('resp-nome').value,
+                        email: document.getElementById('resp-email').value,
+                        telefone: document.getElementById('resp-telefone').value,
+                        membros: membros,
+                    };
+
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        body: JSON.stringify(payload),
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        mode: 'no-cors'
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        successModal.classList.remove('hidden');
+                        successModal.classList.add('flex');
+                        document.body.classList.add('modal-active');
+                        registrationForm.reset();
+                    })
+                    .catch(err => {
+                        console.error('Erro:', err);
+                        alert('Ocorreu um erro ao enviar a inscrição.');
+                    })
+                    .finally(() => {
+                        registrationForm.reset();
+
+                        if(familyContainer) {
+                            familyContainer.innerHTML = '';
+                            familyContainer.appendChild(createMemberRow());
+                        }
+                    });
+                });
+            }
+
+            if(closeSuccess) {
+                closeSuccess.addEventListener('click', () => {
+                    successModal.classList.add('hidden');
+                    successModal.classList.remove('flex');
+                    document.body.classList.remove('modal-active');
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
