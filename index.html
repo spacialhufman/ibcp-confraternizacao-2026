@@ -518,10 +518,10 @@
 
                 row.innerHTML = `
                     <div class="col-span-7 sm:col-span-8">
-                        <input type="text" name="member_name[]" value="${defaultName}" required placeholder="Nome do familiar" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-nome">
+                        <input type="text" name="member_name[]" value="${defaultName}" placeholder="Nome do familiar" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-nome">
                     </div>
                     <div class="col-span-3 sm:col-span-3">
-                        <input type="number" name="member_age[]" value="${defaultAge}" required min="0" max="120" placeholder="Idade" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-idade">
+                        <input type="number" name="member_age[]" value="${defaultAge}" min="0" max="120" placeholder="Idade" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none text-sm text-slate-800 membro-idade">
                     </div>
                     <div class="col-span-2 sm:col-span-1 text-right">
                         <button type="button" class="btn-remove-member w-9 h-9 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center transition" title="Remover">
@@ -627,8 +627,8 @@
                         mode: 'no-cors'
                     })
                     .then(res => {
-                        console.log(res);
                         const response = res.json()
+                        console.log(response);
                     })
                     .then(data => {
                         successModal.classList.remove('hidden');
