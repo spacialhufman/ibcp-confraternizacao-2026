@@ -621,12 +621,14 @@
                         method: 'POST',
                         body: JSON.stringify(payload),
                         headers: {
-                            'Content-Type': 'text/plain;charset=utf-8',
-                            'Accept': 'application/json'
+                            'Content-Type': 'text/plain;charset=utf-8'
                         },
                         mode: 'no-cors'
                     })
-                    .then(res => res.json())
+                    .then(res => {
+                        console.log(res);
+                        const response = res.json()
+                    })
                     .then(data => {
                         successModal.classList.remove('hidden');
                         successModal.classList.add('flex');
