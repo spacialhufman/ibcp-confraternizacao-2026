@@ -295,6 +295,11 @@
                                 <label for="resp-telefone" class="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / Telefone *</label>
                                 <input type="tel" id="resp-telefone" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none transition text-slate-800 text-sm">
                             </div>
+
+                            <div>
+                                <label for="resp-idade" class="block text-sm font-semibold text-slate-700 mb-2">Idade *</label>
+                                <input type="tel" id="resp-idade" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-church-500 focus:border-church-500 outline-none transition text-slate-800 text-sm">
+                            </div>
                         </div>
                     </div>
 
@@ -600,6 +605,12 @@
                 registrationForm.addEventListener('submit', (e) => {
                     e.preventDefault();
 
+                    // atualizacao do texto do botao confirmar
+                    const btnConfirm = document.querySelector('.btn-confirm');
+                    const oldText = btnConfirm.innerHTML;
+                    btnConfirm.innerHTML = 'Carregando, aguarde...'
+                    btnConfirm.setAttribute('disabled', 'disabled');
+
                     const scriptURL = 'https://script.google.com/macros/s/AKfycbw94KpXOrrAsxMuIfHRZwB1-7S2uIgU-8wFoP7zaz6cIX9NdxIcuWB5hew1b7RckoLMtA/exec';
 
                     // Coleta dados dos membros da família
@@ -614,6 +625,7 @@
                         nome: document.getElementById('resp-nome').value,
                         email: document.getElementById('resp-email').value,
                         telefone: document.getElementById('resp-telefone').value,
+                        idade: document.getElementById('resp-idade').value,
                         membros: membros,
                     };
 
@@ -641,6 +653,9 @@
                         alert('Ocorreu um erro ao enviar a inscrição.');
                     })
                     .finally(() => {
+                        btnConfirm.innerHTML = oldText;
+                        btnConfirm.removeAttribute('disabled');
+
                         registrationForm.reset();
 
                         if(familyContainer) {
